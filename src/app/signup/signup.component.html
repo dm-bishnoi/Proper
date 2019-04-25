@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign up</title>
+</head>
+<body>
+  <form action="" id="signup-form">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded" id="signup">
+      <h2 id="signup-top-name">Sign Up</h2><br>
+      <hr>
+
+        <label for="name" class="signup-label">Name</label>
+        <input type="text" id="signup-name" class="form-control form-control-sm" placeholder="Full Name.."  minlength="8" required title="minimum 8 character required">
+        <br>
+
+        <label for="email" class="signup-label">Email</label>
+        <input type="email" id="signup-email" class="form-control form-control-sm" placeholder="Email.." required>
+        <br>
+
+        <label for="password" class="signup-label">Password</label>
+        <input type="password" id="signup-pwd" class="form-control form-control-sm" placeholder="Password" title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numeric characters" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+        <br>
+
+        <button type="submit" class="btn btn-primary" name="btn-submit" >Sign Up</button>
+    </div>
+  </form>
+
+</body>
+</html>
