@@ -1,3 +1,50 @@
-<p>
-  signin works!
-</p>
+<div class="shadow-lg p-3 mb-5 bg-white rounded" id="formname">
+ 
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit(profileForm.value)">
+    <div style="margin-top:40px;">
+      <h3>Name</h3>
+        <label style="margin-left:50px;">
+          <span class="name">First Name:</span><br>
+          <input type="text" formControlName="firstName" name="fname"  class="form-control form-control-sm nameinput" placeholder="Your First Name..">
+        </label>
+        
+    <br>
+
+        <label style="margin-left:50px">
+          <span class="name"> Last Name:</span><br>
+          <input type="text" formControlName="lastName" name="lname"  class="form-control form-control-sm nameinput" placeholder="Your Last Name..">
+        </label>
+        <br><br>
+
+    </div>
+    <div formGroupName="address">
+      <div class="form-group">
+      <h3>Address</h3>
+
+      <label style="margin-left:50px">
+        <span class="name"> street:</span><br>
+        <input type="text" formControlName="street" name="street"  class="form-control form-control-sm nameinput" placeholder="Your Last Name..">
+      </label>
+
+      <label style="margin-left:50px">
+        <span class="name"> city:</span><br>
+        <input type="text" formControlName="city" name="city"  class="form-control form-control-sm nameinput" placeholder="Your Last Name..">
+      </label>
+
+      <label style="margin-left:50px">
+        <span class="name"> state:</span><br>
+        <input type="text" formControlName="state" name="state"  class="form-control form-control-sm nameinput" placeholder="Your Last Name..">
+      </label>
+
+      <label style="margin-left:50px">
+        <span class="name"> zip:</span><br>
+        <input type="text" formControlName="zip" name="zip"  class="form-control form-control-sm nameinput" placeholder="Your Last Name..">
+      </label>
+    </div>
+  </div>
+    <button type="submit" [disabled]="!profileForm.touched" class="btn btn-danger" id="submit">Submit</button>
+  
+    <!-- <button (click)="updateProfile()">Update Profile</button>   -->
+  </form>
+  
+</div>
