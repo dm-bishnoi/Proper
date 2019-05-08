@@ -1,0 +1,58 @@
+
+
+<div class="shadow-lg p-3 mb-5 bg-white rounded form">
+  
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input ngModel type="text" name="username" matInput placeholder="Username" value=""required>
+    <!-- <span matSuffix>@domain.com</span>
+    <span matPrefix>@admin.</span> -->
+    <mat-error>
+      The username is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+      <input ngModel type="email" name="Email" matInput placeholder="Email" value=""required>
+      <!-- <span matSuffix>@domain.com</span>
+      <span matPrefix>@admin.</span> -->
+      <mat-error>
+        The Email is required.
+      </mat-error>
+    </mat-form-field>
+   
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Leave a comment"></textarea>
+  </mat-form-field>
+</form>
+  <mat-radio-group>
+    <p>Gender</p>
+    <mat-radio-button value="male" name="gender" [checked]="isChecked">Male</mat-radio-button><br>
+    <mat-radio-button value="female" name="gender">Female</mat-radio-button>
+  </mat-radio-group><br>
+
+<br>
+<p>State</p>
+  <select> 
+    <option
+      *ngFor="let state of states"
+      [value]="state.id" >
+      {{ state.name }}
+    </option>
+  </select><br>
+  <br>
+
+<mat-checkbox 
+  #showDetails
+  [value]=""
+  [checked]="isChecked"
+  (change)="onChange($event)">
+  I agree <span ><a href="#" id="term"> terms & conditions</a></span></mat-checkbox><br>
+
+  <!-- <div class="show" *ngIf="showDetails.checked">
+    Welcome to the this site.
+    This site some terms and conditions.
+  </div> -->
+  <button type="submit" mat-raised-button color="primary"  routerLink="">Primary</button>
+</div>
