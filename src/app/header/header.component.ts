@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-time = 0;
+// time = 0;
   constructor() { }
 
   ngOnInit() {
   }
-increasClick() {
-this.time++;
-}
+// increasClick() {
+// this.time++;
+// }
 }

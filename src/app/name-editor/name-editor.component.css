@@ -20,9 +20,17 @@
   width: 100%;
 }
 .form{
-  margin-left: 400px;
-  margin-top: 20px;
-  width: 500px
+  /* margin-left: 400px; */
+  margin-top: 70px;
+  /* width: 400px; */
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 40%; */
+  /* height: 50%; */
 }
 #term{
   text-decoration: none;

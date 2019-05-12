@@ -1,41 +1,32 @@
-#signup{
-    margin-top: 130px;
-    margin-left: 450px;
-    margin-right: 450px;
-    text-align: center;
-    padding-left: 500px;
-}
-#signup-top-name{
+.form{
+    /* margin-left: 400px; */
+    margin-top: 170px;
+    /* width: 400px; */
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 40%; */
+    /* height: 50%; */
+  }
+  p{
     font-weight: bold;
-}
-
-hr{
-    border : 1px solid #f1f1f1;
-}
-.signup-label{
-    font-weight: bold;
-    text-align: left;
-    margin-right: 790px
-}
-
-#signup-name{
-    border-radius: 10px;
-    font-weight: bold;
-    border: none;
-    background-color: #f1f1f1;
-    /* color:  rgb(17, 85, 107); */
-}
-
-#signup-email{
-    border-radius: 10px;
-    font-weight: bold;
-    border: none;
-    background-color: #f1f1f1;
-}
-
-#signup-pwd{
-    border-radius: 10px;
-    font-weight: bold;
-    border: none;
-    background-color: #f1f1f1;
-}
+  }
+  .signup-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%
+  }
+  .signup{
+    width: 100%;
+  }
+  hr{
+      border: 2px solid #f1f1f1;
+      margin-bottom: 25px;
+  }
+  #term{
+      text-decoration: none;
+      color: dodgerblue
+  }

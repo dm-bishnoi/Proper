@@ -48,11 +48,12 @@
   [value]=""
   [checked]="isChecked"
   (change)="onChange($event)">
-  I agree <span ><a href="#" id="term"> terms & conditions</a></span></mat-checkbox><br>
+  I agree <span ><a href="#" id="term" routerLink=""> terms & conditions</a></span></mat-checkbox><br>
 
   <!-- <div class="show" *ngIf="showDetails.checked">
     Welcome to the this site.
     This site some terms and conditions.
   </div> -->
-  <button type="submit" mat-raised-button color="primary"  routerLink="">Primary</button>
+  <button type="submit" mat-raised-button color="primary"  routerLink="">Submit</button>
 </div>
+<mat-icon svgIcon="thumbs-up"></mat-icon>

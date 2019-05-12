@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 // import { MdCheckboxModule } from '@angular/material';
-import {MatButtonModule, MatCheckboxModule, MatRadioModule, MatSelectModule, MatInputModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatRadioModule, MatSelectModule, MatInputModule, MatIconModule} from '@angular/material';
+import {MatMenuModule} from '@angular/material/menu';
 import { NgModule } from '@angular/core';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -15,8 +16,14 @@ import { HeaderExpComponent } from './header-exp/header-exp.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material';
-
-
+// import { MenuComponent } from './menu/menu.component';
+// import { MenuComponent } from './menu/menu.component';
+import { RouterModule } from '@angular/router';
+import { MenuComponent } from './menu/menu.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
 // import { ReactiveFormsModule } from '@angualr/forms';
 
 @NgModule({
@@ -26,7 +33,12 @@ import { MatNativeDateModule } from '@angular/material';
     SigninComponent,
     NameEditorComponent,
     HeaderComponent,
-    HeaderExpComponent
+    HeaderExpComponent,
+    HomeComponent,
+    RegisterComponent,
+    LoginComponent,
+    ProfileComponent,
+    // MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +52,28 @@ import { MatNativeDateModule } from '@angular/material';
     NoopAnimationsModule,
     MatRadioModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
+    MatMenuModule,
+    RouterModule.forRoot(
+      [
+        {
+          path: 'signin',
+          component: SigninComponent
+        },
+        {
+          path: 'login',
+          component: LoginComponent
+        },
+        {
+          path: 'signup',
+          component: SignupComponent
+        },
+        {
+          path: 'register',
+          component: RegisterComponent
+        }
+      ])
   ],
   exports: [MatButtonModule, MatCheckboxModule],
   providers: [],
